@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <style>
+        @page {
+            size: 7in 9.25in;
+            margin: 27mm 16mm 27mm 16mm;
+        }
+
+        body,
+        html {
+            height: 100%;
+            font-family: Poppins-Regular, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #212529;
+            background-color: #fff;
+        }
+
+        .container {
+            min-height: 100vh;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            background: #e6e6e6;
+        }
+
+        .wrap-feedback {
+            width: 920px;
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            padding: 31px 55px 59px;
+            /* padding: 62px 55px 90px; */
+        }
+
+        .wrap-input {
+            position: relative;
+            border: 1px solid #e6e6e6;
+            border-radius: 13px;
+            padding: 10px 30px 9px 22px;
+            margin-bottom: 20px;
+            background-color: #f7f7f7;
+        }
+
+        .wrap-radio {
+            display: flex;
+            align-items: center;
+            padding-top: 10px;
+        }
+
+        .wrap-space-between {
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+        .rs-wrap {
+            width: calc((100% - 135px)/2);
+        }
+
+        .label-input {
+            font-family: Montserrat-SemiBold;
+            font-size: 10px;
+            color: #393939;
+            line-height: 1.5;
+            text-transform: uppercase;
+        }
+
+        input[type="text"] {
+            height: 40px;
+            display: block;
+            width: 100%;
+            background: 0 0;
+            font-family: Montserrat-SemiBold;
+            font-size: 18px;
+            color: #555;
+            line-height: 1.2;
+            padding-right: 15px;
+            outline: none;
+            border: none;
+            overflow: visible;
+        }
+
+        label {
+            background: 0 0;
+            font-family: Montserrat-SemiBold;
+            font-size: 18px;
+            color: #555;
+            line-height: 1.2;
+        }
+
+        .title {
+            display: block;
+            width: 100%;
+            font-family: Montserrat-Black;
+            font-size: 39px;
+            color: #333;
+            line-height: 1.2;
+            text-align: center;
+            padding-bottom: 28px;
+        }
+
+        textarea {
+            min-height: 120px;
+            padding-top: 9px;
+            padding-bottom: 13px;
+            display: block;
+            width: 100%;
+            background: 0 0;
+            font-family: Montserrat-SemiBold;
+            font-size: 18px;
+            color: #555;
+            line-height: 1.2;
+            padding-right: 15px;
+            outline: none;
+            border: none;
+        }
+
+        .btn-submit {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 20px;
+            width: 100%;
+            height: 50px;
+            background-color: #333;
+            border-radius: 25px;
+            font-family: Montserrat-Medium;
+            font-size: 16px;
+            color: #fff;
+            line-height: 1.2;
+            transition: all .4s;
+            outline: none !important;
+            border: none;
+            text-transform: uppercase;
+        }
+
+        .btn-submit:hover {
+            background-color: #00ad5f;
+            cursor: pointer;
+        }
+
+        .bg-white {
+            background-color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- [START feedback form] -->
+    <div class="container">
+        <div class="wrap-feedback">
+            <form action="comments.php" method="POST">
+                <span class="title">Feedback</span>
+
+                <div class="wrap-input">
+                    <span class="label-input">Full name *</span>
+                    <input type="text" name="name" placeholder="Enter your Name">
+                </div>
+
+                <div class="wrap-input">
+                    <span class="label-input">Email *</span>
+                    <input type="text" name="email" placeholder="Enter your email">
+                </div>
+
+                <div class="wrap-space-between">
+                    <div class="wrap-input rs-wrap">
+                        <span class="label-input">Phone *</span>
+                        <input type="text" name="phone" placeholder="Enter phone number">
+                    </div>
+                    <div class="wrap-input rs-wrap">
+                        <span class="label-input">Gender *</span>
+                        <div class="wrap-radio">
+                            <input id="option-one" name="gender" value="Male" type="radio">
+                            <label for="option-one"><span>Male</span></label>
+                            <input id="option-two" name="gender" value="Female" type="radio">
+                            <label for="option-two"><span>Female</span></label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wrap-input bg-white">
+                    <span class="label-input">Message *</span>
+                    <textarea name="message" placeholder="Your message here..."></textarea>
+                </div>
+                <div>
+                    <button class="btn-submit">
+                        <span>Submit</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- [END feedback form] -->
+</body>
+
+</html>
